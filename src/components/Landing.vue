@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import {mapGetters, mapActions} from 'vuex'
+  import {mapGetters} from 'vuex'
 
   export default {
     name: "landing",
@@ -68,7 +68,7 @@
     computed: {
       ...mapGetters({
         posts: 'getFeedback',
-        profile: 'getProfile'
+        profile: 'profile/getProfile'
       })
     }
   }

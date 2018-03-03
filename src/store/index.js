@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import actions from './actions'
+import profileModule from './modules/profileModule'
 
 
 Vue.use(Vuex)
@@ -9,7 +10,6 @@ const debug = process.env.NODE_ENV !== 'production'
 
 const state = {
   friends: [],
-  profile: null,
   selectedFriend: null,
   cityFilters: [],
   feedback: []
@@ -17,9 +17,6 @@ const state = {
 const getters = {
   getFriends: state => {
     return state.friends
-  },
-  getProfile: state => {
-    return state.profile
   },
   getSelectedFriend: state => {
     return state.selectedFriend
@@ -34,9 +31,6 @@ const getters = {
 const mutations = {
   SET_FRIENDS(state, friends) {
     state.friends = friends
-  },
-  SET_PROFILE(state, profile) {
-    state.profile = profile
   },
   SET_SELECTED_FRIEND(state, friend) {
     state.selectedFriend = friend
@@ -57,5 +51,8 @@ export default new Vuex.Store({
   getters,
   mutations,
   actions,
+  modules: {
+    profile: profileModule
+  },
   strict: debug
 })

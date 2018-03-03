@@ -4,7 +4,7 @@ export default {
   async fetchInitialData({commit}) {
 
     const [profileResponse, friendsResponse, postsResponse] = await Promise.all([fetchProfile(), fetchFriends(), fetchPosts()])
-    commit('SET_PROFILE', profileResponse.data)
+    commit('profile/SET_PROFILE', profileResponse.data)
     commit('SET_FRIENDS', friendsResponse.data)
     commit('SET_FEEDBACK', postsResponse.data)
 
