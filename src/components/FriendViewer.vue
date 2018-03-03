@@ -14,11 +14,11 @@
     </section>
 
 
-    <section class="hero is-primary">
+    <section class="hero is-success">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Feedback
+            Posts
           </h1>
         </div>
       </div>
@@ -34,9 +34,7 @@
           <div class="media-content">
             <div class="content">
               <p>
-                <strong>
-                  <router-link :to="{name:'FriendViewer', params:{friendId:post.friendId}}">{{post.name}}</router-link>
-                </strong>
+                <strong>{{post.name}}</strong>
                 <br>
                 {{post.content}}
               </p>
@@ -50,14 +48,15 @@
 
 <script>
   import {mapGetters} from 'vuex'
-    export default {
-        name: "friend-viewer",
-      computed:{
-        ...mapGetters({
-          selectedFriend:'getSelectedFriend'
-        })
-      }
+
+  export default {
+    name: "friend-viewer",
+    computed: {
+      ...mapGetters({
+        selectedFriend: 'getSelectedFriend'
+      })
     }
+  }
 </script>
 
 <style scoped>

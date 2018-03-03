@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
+import actions from './actions'
 
-let endpoint = "http://localhost:3000"
 
 Vue.use(Vuex)
 
@@ -52,40 +51,6 @@ const mutations = {
     Vue.set(state.selectedFriend, 'posts', posts)
   }
 }
-const actions = {
-  fetchInitialData({commit}) {
-    axios.get(`${endpoint}/profile`)
-      .then(response => {
-        commit('SET_PROFILE', response.data)
-      })
-    axios.get(`${endpoint}/friends`)
-      .then(response => {
-        commit('SET_FRIENDS', response.data)
-      })
-    axios.get(`${endpoint}/posts`)
-      .then(response => {
-        commit('SET_FEEDBACK', response.data)
-      })
-  },
-  fetchFriendDataById({commit}, friendId) {
-    axios.get(`${endpoint}/friends/${friendId}/posts`)
-      .then(response => {
-        commit('SET_SELECTED_FRIEND_POSTS', response.data)
-      })
-  },
-  setSelectedFriend({commit, getters, dispatch}, friendId) {
-    let selectedFriend
-    getters.getFriends.forEach(friend => {
-      if (friend.id === friendId) {
-        selectedFriend = friend
-      }
-    })
-    dispatch('fetchFriendDataById', selectedFriend.id)
-    commit('SET_SELECTED_FRIEND', selectedFriend)
-  }
-
-}
-
 
 export default new Vuex.Store({
   state,

@@ -5,10 +5,15 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex'
+
   export default {
     name: 'App',
-    mounted(){
-      this.$store.dispatch('fetchInitialData')
+    methods: {
+      ...mapActions(['fetchInitialData'])
+    },
+    mounted() {
+      this.fetchInitialData()
     }
   }
 </script>
