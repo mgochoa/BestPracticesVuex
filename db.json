@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "friendId": 1,
+      "name": "Luca Giovanny",
+      "content": "If we're strictly talking body count, then I'm a morning person.",
+      "thumbnail": "http://i.pravatar.cc/300?img=1"
+    },
+    {
+      "id": 2,
+      "friendId": 1,
+      "name": "Luca Giovanny",
+      "content": "Then a white guy laughed at his own joke with an intensity that hinted at a darkness within.",
+      "thumbnail": "http://i.pravatar.cc/300?img=1"
+    },
+    {
+      "id": 3,
+      "friendId": 2,
+      "name": "Tesla Windows",
+      "content": "If I weigh 400 pounds and can lift 600 pounds, shouldn't I be able to fly by lifting the chair I'm sitting in?",
+      "thumbnail": "http://i.pravatar.cc/300?img=2"
+    },
+    {
+      "id": 4,
+      "friendId": 3,
+      "name": "Vito Corleone",
+      "content": "As a man, it's impossible to walk passed a punching bag and not hit it twice before walking away.",
+      "thumbnail": "http://i.pravatar.cc/300?img=3"
+    },
+    {
+      "id": 5,
+      "friendId": 3,
+      "name": "Vito Corleone",
+      "content": "6:30 is the best time on a clock hands down",
+      "thumbnail": "http://i.pravatar.cc/300?img=3"
+    }
+  ],
+  "profile": {
+    "name": "Manuel Ochoa",
+    "alias": "Memo",
+    "email": "mochoa1127@gmail.com",
+    "thumbnail": "https://cdn.discordapp.com/attachments/415308818994561035/417053239184457728/18766022_10213659393099314_5964263384797750247_n.jpg"
+  },
+  "friends": [
+    {
+      "id": 1,
+      "name": "Luca Giovanny",
+      "email": "luca@proxy.com",
+      "thumbnail": "http://i.pravatar.cc/300?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Tesla Windows",
+      "email": "tesla@plight.com",
+      "thumbnail": "http://i.pravatar.cc/300?img=2"
+    },
+    {
+      "id": 3,
+      "name": "Vito Corleone",
+      "email": "father@grand.com",
+      "thumbnail": "http://i.pravatar.cc/300?img=3"
+    }
+  ]
+}
